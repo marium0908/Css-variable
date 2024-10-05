@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>css variable</title>
+<style>
+:root {
+ 
+  --white: #ffffff; 
+}
+
+body {
+  background-color: var(--white;
+}
+
+h2 {
+  border-bottom: 2px solid var(--white);
+}
+
+.container {
+  color: var(--white);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+.container button  {
+  background-color: var(--white);
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 5px;
+}
+.buttoncolor{
+  color: lightpink;
+}
+</style>
+
+<script>
+// Get the root element
+var r = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
+  // Alert the value of the --\white variable
+  alert("The value of --white is: " + rs.getPropertyValue('--white'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --white to another value (in this case "lightblue")
+  r.style.setProperty('white');
+}
+</script>
+</head>
+<body>
+
+
+
+<div class="container">
+ 
+</div>
+<br>
+<div class=" button color">
+<button type="button" onclick="myFunction_get()" >Click me</button></div>
+
+
+</body>
+</html>
